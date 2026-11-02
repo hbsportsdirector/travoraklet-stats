@@ -11,8 +11,18 @@ th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertic
 .bar{display:inline-block;width:110px;height:10px;background:var(--line);border-radius:5px;margin-right:8px;vertical-align:middle;overflow:hidden}
 .bar span{display:block;height:100%;background:var(--o)}
 .panel{display:none}.panel.on{display:block}
+.sticky{position:sticky;top:0;background:var(--bg);padding:6px 0;z-index:2}
 nav.top a{color:var(--o);margin-right:14px}
 footer{color:#5c6a65;font-size:.85rem;margin-top:24px}
-@media (max-width:600px){.bar{width:60px}td,th{padding:5px 4px;font-size:.88rem}}
+@media (max-width:600px){.bar{width:60px}td,th{padding:5px 4px;font-size:.88rem}.menu{white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}.menu a,.menu button{margin:2px 4px 2px 0}table{display:block;overflow-x:auto}}
 @media print{.menu,nav.top{display:none}body{background:#fff}}
-</style></head><body><div class='wrap'><nav class='top'><a href="index.html">Statistik</a> <a href="tavling.html">Tävlingen</a> <a href="rad.html" style=font-weight:700>Senaste raden</a></nav><p>Ingen rad framräknad än.</p><footer>Travoraklet · uppdaterad 2026-11-02 11:58 · räknat ur ATG:s öppna loppdata, bara sammanställningar.</footer></div></body></html>
+
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:#e3efe9;color:#1f5a3f;margin-left:4px;vertical-align:middle;font-weight:600}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 14px;color:#5c6a65;font-size:.9rem;margin-bottom:10px}.facts b{color:#1f2a27}
+.hname{cursor:pointer;color:var(--g);text-decoration:underline dotted}
+input.search{font-size:1.05rem;padding:10px 14px;border:1px solid var(--line);border-radius:10px;width:100%;max-width:480px}
+#hits a{display:block;padding:6px 10px;background:#fff;border:1px solid var(--line);border-top:none;color:var(--g);text-decoration:none}
+#hits a:first-child{border-top:1px solid var(--line);border-radius:10px 10px 0 0}#hits a:last-child{border-radius:0 0 10px 10px}
+.scr{color:#999;text-decoration:line-through}
+</style></head><body><div class='wrap'><nav class='top'><a href="index.html">Statistik</a> <a href="startlistor.html">Startlistor</a> <a href="hast.html">Sök häst</a> <a href="tavling.html">Tävlingen</a> <a href="rad.html" style=font-weight:700>Senaste raden</a></nav><p>Ingen rad framräknad än.</p><footer>Travoraklet · uppdaterad 2026-11-02 12:10 · räknat ur ATG:s öppna loppdata, bara sammanställningar.</footer></div></body></html>

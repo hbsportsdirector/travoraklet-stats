@@ -1,0 +1,28 @@
+<!doctype html><html lang='sv'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Travoraklet – sök häst</title><style>
+:root{--g:#16302B;--o:#C9641E;--bg:#F6F3EC;--line:#E1DCD0}*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:#1f2a27}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}h1{color:var(--g);margin:.2em 0}h2{color:var(--g);margin:.6em 0 .2em}
+.menu a,.menu button{display:inline-block;margin:3px 6px 3px 0;padding:6px 12px;border-radius:999px;background:#fff;border:1px solid var(--line);color:var(--g);text-decoration:none;font-size:.92rem;cursor:pointer;font-family:inherit}
+.menu .on{background:var(--g);color:#fff;border-color:var(--g)}.periods .on{background:var(--o);border-color:var(--o)}
+.desc{color:#5c6a65;font-size:.92rem;margin:4px 0 12px}
+table{border-collapse:collapse;width:100%;background:#fff;border-radius:12px;overflow:hidden;font-size:.95rem}
+th,td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}th{background:var(--g);color:#fff;font-weight:600}
+.badge{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:.85rem;letter-spacing:.5px}
+.bar{display:inline-block;width:110px;height:10px;background:var(--line);border-radius:5px;margin-right:8px;vertical-align:middle;overflow:hidden}
+.bar span{display:block;height:100%;background:var(--o)}
+.panel{display:none}.panel.on{display:block}
+.sticky{position:sticky;top:0;background:var(--bg);padding:6px 0;z-index:2}
+nav.top a{color:var(--o);margin-right:14px}
+footer{color:#5c6a65;font-size:.85rem;margin-top:24px}
+@media (max-width:600px){.bar{width:60px}td,th{padding:5px 4px;font-size:.88rem}.menu{white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:2px}.menu a,.menu button{margin:2px 4px 2px 0}table{display:block;overflow-x:auto}}
+@media print{.menu,nav.top{display:none}body{background:#fff}}
+
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:#e3efe9;color:#1f5a3f;margin-left:4px;vertical-align:middle;font-weight:600}
+.hcard{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:12px 0}
+.facts{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:4px 14px;color:#5c6a65;font-size:.9rem;margin-bottom:10px}.facts b{color:#1f2a27}
+.hname{cursor:pointer;color:var(--g);text-decoration:underline dotted}
+input.search{font-size:1.05rem;padding:10px 14px;border:1px solid var(--line);border-radius:10px;width:100%;max-width:480px}
+#hits a{display:block;padding:6px 10px;background:#fff;border:1px solid var(--line);border-top:none;color:var(--g);text-decoration:none}
+#hits a:first-child{border-top:1px solid var(--line);border-radius:10px 10px 0 0}#hits a:last-child{border-radius:0 0 10px 10px}
+.scr{color:#999;text-decoration:line-through}
+</style></head><body><div class='wrap'><nav class='top'><a href="index.html">Statistik</a> <a href="startlistor.html">Startlistor</a> <a href="hast.html" style=font-weight:700>Sök häst</a> <a href="tavling.html">Tävlingen</a> <a href="rad.html">Senaste raden</a></nav><h1>Sök häst</h1><p class='desc'>Hästar som startat de senaste två åren.</p><input class='search' id='q' placeholder='Skriv hästens namn …' autocomplete='off'><div id='hits'></div><div id='hcard'></div><script src='data.js'></script><script>var IDX=Object.keys(REG).map(function(k){return [REG[k].n.toLowerCase(),k]});var q=document.getElementById('q'),hits=document.getElementById('hits');q.oninput=function(){var s=q.value.toLowerCase().trim();hits.innerHTML='';if(s.length<2)return;var m=IDX.filter(function(x){return x[0].indexOf(s)>=0}).slice(0,12);hits.innerHTML=m.map(function(x){return '<a href="#" onclick="showHorse(\''+x[1]+'\');return false">'+esc(REG[x[1]].n)+' <small>('+REG[x[1]].st+' starter, senast '+REG[x[1]].last+')</small></a>'}).join('')};</script><footer>Travoraklet · uppdaterad 2026-11-02 12:11 · räknat ur ATG:s öppna loppdata, bara sammanställningar.</footer></div></body></html>
